@@ -1,0 +1,55 @@
+                                                                                
+      ██╗ █████╗ ██╗   ██╗ █████╗      ██████╗ ██████╗ ██╗     ██╗     ███████╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
+      ██║██╔══██╗██║   ██║██╔══██╗    ██╔════╝██╔═══██╗██║     ██║     ██╔════╝██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
+      ██║███████║██║   ██║███████║    ██║     ██║   ██║██║     ██║     █████╗  ██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗
+ ██   ██║██╔══██║╚██╗ ██╔╝██╔══██║    ██║     ██║   ██║██║     ██║     ██╔══╝  ██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║
+ ╚█████╔╝██║  ██║ ╚████╔╝ ██║  ██║    ╚██████╗╚██████╔╝███████╗███████╗███████╗╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║
+  ╚════╝ ╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝     ╚═════╝ ╚═════╝ ╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+                                                                                
+====================================================================================================================================
+                                      MASTER CHEAT SHEET: THE JAVA COLLECTIONS FRAMEWORK
+====================================================================================================================================
+
+[1] LISTS (The "Ordered" Group)
+------------------------------------------------------------
+* PURPOSE: To keep elements in a specific order. Allows duplicates.
+* ARRAYLIST  -> [FAST SEARCH] Uses an array behind the scenes. Best for reading data by index.
+* LINKEDLIST -> [FAST MODIFICATION] Uses nodes. Best if you are constantly adding/removing items from the middle.
+
+[2] SETS (The "Unique" Group)
+------------------------------------------------------------
+* PURPOSE: To ensure no two items are exactly the same.
+* HASHSET       -> [UNORDERED] The fastest. Items go in randomly.
+* LINKEDHASHSET -> [INSERTION ORDER] Remembers what you added first.
+* TREESET       -> [SORTED ORDER] Automatically puts everything in A-Z/1-9 order.
+
+[3] MAPS (The "Pair" Group)
+------------------------------------------------------------
+* PURPOSE: Stores Key-Value pairs (like a dictionary). Keys MUST be unique.
+* HASHMAP       -> [FASTEST] Keys are stored randomly.
+* TREEMAP       -> [SORTED KEYS] Keys are kept in sorted order.
+* LINKEDHASHMAP -> [ORDERED KEYS] Keys stay in the order you added them.
+
+[4] QUEUES & STACKS (The "System" Group)
+------------------------------------------------------------
+* PRIORITYQUEUE -> Smallest (or highest priority) items come out first.
+* ARRAYDEQUE    -> The modern way to build a STACK (Last-In-First-Out).
+                   Use .push() to add and .pop() to remove.
+
+[5] THE MODERN WAY: STREAMS
+------------------------------------------------------------
+Instead of long loops, use the Stream API (Java 8+):
+* .filter() -> Keep only what you need.
+* .map()    -> Transform the data.
+* .sorted() -> Order the results.
+* .collect()-> Put it all back into a List/Set.
+
+[6] GOLDEN RULE FOR CUSTOM OBJECTS
+------------------------------------------------------------
+If you put your own Classes into a HashSet or HashMap:
+* YOU MUST OVERRIDE .equals()   (To define what "same" means)
+* YOU MUST OVERRIDE .hashCode() (To help Java find the folder the data is in)
+
+====================================================================================================================================
+                                            "Choose your tool based on your goal."
+====================================================================================================================================
